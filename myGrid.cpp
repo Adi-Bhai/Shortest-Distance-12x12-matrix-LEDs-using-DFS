@@ -12,7 +12,7 @@ From a position, you can only move
 
 */
 
-const int sizeOfGrid=12;
+const int sizeOfGrid=12; // Size of Grid
 int x; // 'x' is a variable for the grid which is always modifialble
 
 int main(){
