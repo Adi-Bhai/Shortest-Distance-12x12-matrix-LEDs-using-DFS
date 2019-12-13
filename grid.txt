@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <windows.h>
+#define VK_W 0x57
+#define VK_A 0x41
+#define VK_S 0x53
+#define VK_D 0x44
+
+int up = 0;
+int down = 0;
+int left = 0;
+int right = 0;
+
+using namespace std;
+
+
+int main()
+{
+    int grid[5][5] = {{1,2,3,4,5}, {1,2,3,4,5}};
+    char character = '*';
+
+    up = GetAsyncKeyState(VK_W);
+        if(up)
+        {
+            cout << "Test" << endl;
+        }
+
+        cin.get();
+}
