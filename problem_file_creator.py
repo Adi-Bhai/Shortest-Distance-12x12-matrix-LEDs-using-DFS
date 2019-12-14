@@ -14,17 +14,22 @@ def print_grid():
 
 def print_grid_address():
     result = ''
-    unavailable_spaces = int(grid_size*0.972)       # Taking 10% of unavailable cells
+    unavailable_spaces = int((grid_size**2)*0.1)       # Taking 15% of unavailable cells
     for x in range(grid_size):
         for y in range(grid_size):
             if unavailable_spaces > 0:
-                if random.randint(0,1):            
-                    result = result + '(' + str(x) + ',' + str(y) + ')'
+                if random.randint(0,50) > 44:          # Randomization is more spread out
                     unavailable_spaces = unavailable_spaces-1
-                
+                    print(f"Closed Cells: {unavailable_spaces}: ({x}, {y})")
+                else:
+                    result = result + '(' + str(x) + ',' + str(y) + ')'
+            else:
+                result = result + '(' + str(x) + ',' + str(y) + ')'
     return result
 
-
+################################################
+#     Generating start and end coordinates     #
+################################################
 def problem_generator(size):
     result = '\n' + size + '\n'
     for iterate in range(int(size)):
