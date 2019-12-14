@@ -1,4 +1,4 @@
-#include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ From a position, you can only move
 */
 
 const int sizeOfGrid=12; // Size of Grid
-int x; // 'x' is a variable for the grid which is always modifialble
+int x; // 'x' is a variable for the grid which is always modifiable
 
 int main(){
     int grid[sizeOfGrid][sizeOfGrid];
