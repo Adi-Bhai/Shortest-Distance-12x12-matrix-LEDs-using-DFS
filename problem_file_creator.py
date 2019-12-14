@@ -30,10 +30,13 @@ def print_grid_address():
 ################################################
 #     Generating start and end coordinates     #
 ################################################
+
+
 def problem_generator(size):
     result = '\n' + size + '\n'
     for iterate in range(int(size)):
-        result = result + str(random.randint(0, grid_size-1)) + ' ' + str(random.randint(0, grid_size-1)) + ' ' + str(random.randint(0, grid_size-1)) + ' ' + str(random.randint(0, grid_size-1)) + '\n'
+        result = result + str(random.randint(0, grid_size-1)) + ' ' + str(random.randint(0, grid_size-1)) + ' ' \
+                 + str(random.randint(0, grid_size-1)) + ' ' + str(random.randint(0, grid_size-1)) + '\n'
     return result
 
 
@@ -48,7 +51,7 @@ problem_size = input('Number of problems to be generated: ')
 #################################################
 
 if os.path.exists("problem.txt"):
-  os.remove("problem.txt")
+    os.remove("problem.txt")
 
 file = open('problem.txt', 'wt')
 file.write(print_grid_address())
